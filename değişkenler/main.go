@@ -4,5 +4,6 @@ import "golesson/variables"
 
 func main() {
 
-	variables.Demo1()
+	//variables.Demo1()
+	variables.Demo2()
 }
