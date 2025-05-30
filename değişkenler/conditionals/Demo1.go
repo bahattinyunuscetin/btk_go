@@ -2,7 +2,7 @@ package conditionals
 
 import "fmt"
 
-func main() {
+func Demo1() {
 	var hesap float64 = 1000
 	var cekilmekIstenen float64 = 900
 
@@ -10,7 +10,7 @@ func main() {
 		fmt.Println("para yetersiz")
 	}
 	if cekilmekIstenen <= hesap {
-		fmt.Println("paraniz hazirlaniyor")
+		fmt.Println("paranız hazırlanıyor")
 		hesap = hesap - cekilmekIstenen
 	}
 	fmt.Println("Bitti. hesaptaki para : " + fmt.Sprintf("%v", hesap))
