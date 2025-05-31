@@ -10,11 +10,8 @@ func Demo2() {
 	for _, sayi := range sayilar {
 
 		if sayi%2 == 1 {
-
 			toplam += sayi
-
 		}
-
 	}
 	fmt.Println(toplam)
 

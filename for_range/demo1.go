@@ -9,12 +9,9 @@ func Demo1() {
 	}
 	for _, sehir := range sehirler {
 		fmt.Println(sehir)
-
 	}
 	for i, sehir := range sehirler {
 		fmt.Print(i)
 		fmt.Println(sehir)
-
 	}
-
 }

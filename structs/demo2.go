@@ -10,13 +10,10 @@ type customer struct {
 
 func (c customer) save() {
 	fmt.Println("eklendi  ", c.firstName)
-
 }
 func (c customer) update() {
 	fmt.Println("güncellendi  ", c.firstName)
-
 }
-
 func Demo2() {
 	c := customer{firstName: "engin", lastName: "demiroğ", age: 35}
 	c.save()
