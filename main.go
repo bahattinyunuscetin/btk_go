@@ -1,19 +1,19 @@
 package main
 
 import (
-	"fmt"
-	"golesson/channels"
+	"golesson/interface_"
 )
 
 func main() {
 
-	CiftSayiCN := make(chan int)
-	teksayicn := make(chan int)
+	// CiftSayiCN := make(chan int)
+	// teksayicn := make(chan int)
 
-	go channels.Teksayilar(teksayicn)
-	go channels.Ciftsayilar(CiftSayiCN)
+	// go channels.Teksayilar(teksayicn)
+	// go channels.Ciftsayilar(CiftSayiCN)
 
-	ciftsayitoplam, teksayitoplam := <-CiftSayiCN, <-teksayicn
-	carpim := ciftsayitoplam * teksayitoplam
-	fmt.Println("main bitti", carpim)
+	// ciftsayitoplam, teksayitoplam := <-CiftSayiCN, <-teksayicn
+	// carpim := ciftsayitoplam * teksayitoplam
+	// fmt.Println("main bitti", carpim)
+	interface_.Demo1()
 }
