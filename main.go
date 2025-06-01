@@ -1,7 +1,7 @@
 package main
 
 import (
-	"golesson/interface_"
+	"golesson/defer_statment"
 )
 
 func main() {
@@ -15,5 +15,7 @@ func main() {
 	// ciftsayitoplam, teksayitoplam := <-CiftSayiCN, <-teksayicn
 	// carpim := ciftsayitoplam * teksayitoplam
 	// fmt.Println("main bitti", carpim)
-	interface_.Demo1()
+	// interface_.Demo2()
+	defer_statment.Demo3()
+
 }
