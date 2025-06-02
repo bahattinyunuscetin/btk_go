@@ -1,7 +1,8 @@
 package main
 
 import (
-	"golesson/defer_statment"
+	"fmt"
+	errorhandling "golesson/error_handling"
 )
 
 func main() {
@@ -16,6 +17,6 @@ func main() {
 	// carpim := ciftsayitoplam * teksayitoplam
 	// fmt.Println("main bitti", carpim)
 	// interface_.Demo2()
-	defer_statment.Demo3()
+	fmt.Println(errorhandling.TahminEt2(102))
 
 }
