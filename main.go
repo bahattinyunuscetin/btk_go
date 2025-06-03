@@ -1,8 +1,7 @@
 package main
 
 import (
-	"fmt"
-	errorhandling "golesson/error_handling"
+	"golesson/restful"
 )
 
 func main() {
@@ -17,6 +16,6 @@ func main() {
 	// carpim := ciftsayitoplam * teksayitoplam
 	// fmt.Println("main bitti", carpim)
 	// interface_.Demo2()
-	fmt.Println(errorhandling.TahminEt2(102))
-
+	//fmt.Println(errorhandling.TahminEt2(102))
+	restful.Demo2()
 }
