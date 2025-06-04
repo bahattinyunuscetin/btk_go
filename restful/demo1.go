@@ -25,27 +25,27 @@ func Demo1() {
 	bodyString := string(bodyBytes)
 	fmt.Println(bodyString)
 	var todo Todo
-	json.Unmarshal(bodyBytes, &todo)
+	json.Unmarshal(bodyBytes, &todo) //sunucudan gelen biti okuyor ve struck olan todo ya atıyor
 	fmt.Println(todo)
 }
 
 func Demo2() {
 	todo := Todo{1, 2, "alışveriş yapılacak", false}
-	jsonTodo, err := json.Marshal(todo)
+	jsonTodo, err := json.Marshal(todo) // struc ı json a çevirir
 	if err != nil {
 		fmt.Println(err)
 	}
 	response, err := http.Post(
-		"https://jsonplaceholder.typicode.com/todos/1",
+		"https://jsonplaceholder.typicode.com/todos",
 		"application/json;charset=utf-8",
-		bytes.NewBuffer(jsonTodo),
+		bytes.NewBuffer(jsonTodo), // post etmeden önce geçiçi süre paketliyor bardak gibi
 	)
 	if err != nil {
 		fmt.Println(err)
 	}
 	defer response.Body.Close()
 
-	bodyBytes, _ := ioutil.ReadAll(response.Body)
+	bodyBytes, _ := ioutil.ReadAll(response.Body) //fake sunucudan gelen(yansıyan) veriyi oku-yazdır
 	bodyString := string(bodyBytes)
 	fmt.Println(bodyString)
 
