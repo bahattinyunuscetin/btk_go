@@ -1,4 +1,4 @@
-package project_
+package refactoring
 
 import (
 	"bytes"
@@ -20,7 +20,7 @@ type Category struct {
 	CatagoryName string `json:"categoryName"`
 }
 
-func GetAllProducts() {
+func GetAllProducts([]Product, error) {
 	response, err := http.Get("http://localhost:3000/products")
 	if err != nil {
 		fmt.Println(err)
@@ -30,12 +30,12 @@ func GetAllProducts() {
 
 	var products []Product
 	json.Unmarshal(bodyBytes, &products)
-	fmt.Println(products)
+	return products, nil
 
 }
 
-func AddProduct() {
-	product := Product{Id: 4, ProductName: "telephone", CatagoryId: 1, UnitPrice: 600.00}
+func AddProduct() (Product, error) {
+	product := Product{ProductName: "microphone", CatagoryId: 1, UnitPrice: 200.00}
 	jsonProduct, err := json.Marshal(product)
 	if err != nil {
 		fmt.Println("JSON'e dönüştürme hatası:", err)
@@ -45,12 +45,12 @@ func AddProduct() {
 	response, err := http.Post("http://localhost:3000/products",
 		"application/json;charset=utf-8", bytes.NewBuffer(jsonProduct))
 	if err != nil {
-		fmt.Println(err)
+		return Product{}, err
 	}
 	defer response.Body.Close()
 	bodyBytes, _ := ioutil.ReadAll(response.Body)
 	var productResponse Product
 	json.Unmarshal(bodyBytes, &productResponse)
-	fmt.Println("kaydedildi", productResponse)
+	return productResponse, nil
 
 }
