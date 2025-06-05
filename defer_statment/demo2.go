@@ -14,7 +14,6 @@ func Demo2(sayi int32) string {
 
 	return "belli değil "
 }
-
 func Test() {
 	sonuc := Demo2(9)
 	fmt.Println(sonuc)

@@ -14,7 +14,6 @@ type Product struct {
 	CatagoryId  int     `json:"categoryId"`
 	UnitPrice   float64 `json:"unitPrice"`
 }
-
 type Category struct {
 	Id           int    `json:"id"`
 	CatagoryName string `json:"categoryName"`
@@ -31,9 +30,7 @@ func GetAllProducts() {
 	var products []Product
 	json.Unmarshal(bodyBytes, &products)
 	fmt.Println(products)
-
 }
-
 func AddProduct() {
 	product := Product{Id: 4, ProductName: "telephone", CatagoryId: 1, UnitPrice: 600.00}
 	jsonProduct, err := json.Marshal(product)
@@ -41,7 +38,6 @@ func AddProduct() {
 		fmt.Println("JSON'e dönüştürme hatası:", err)
 		return
 	}
-
 	response, err := http.Post("http://localhost:3000/products",
 		"application/json;charset=utf-8", bytes.NewBuffer(jsonProduct))
 	if err != nil {
@@ -52,5 +48,4 @@ func AddProduct() {
 	var productResponse Product
 	json.Unmarshal(bodyBytes, &productResponse)
 	fmt.Println("kaydedildi", productResponse)
-
 }

@@ -6,7 +6,6 @@ import (
 )
 
 func TahminEt(tahmin int) (string, error) {
-
 	aklimdakiSayi := 50
 	if tahmin < 1 || tahmin > 100 {
 		return "", errors.New("1-100 arası gir")
@@ -22,7 +21,6 @@ func TahminEt(tahmin int) (string, error) {
 	}
 	return "bildin", nil
 }
-
 func Demo2() {
 	mesaj, hata := TahminEt(101)
 	fmt.Println(mesaj)

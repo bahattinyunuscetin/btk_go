@@ -28,7 +28,6 @@ func Demo1() {
 	json.Unmarshal(bodyBytes, &todo) //sunucudan gelen biti okuyor ve struck olan todo ya atıyor
 	fmt.Println(todo)
 }
-
 func Demo2() {
 	todo := Todo{1, 2, "alışveriş yapılacak", false}
 	jsonTodo, err := json.Marshal(todo) // struc ı json a çevirir
@@ -44,13 +43,10 @@ func Demo2() {
 		fmt.Println(err)
 	}
 	defer response.Body.Close()
-
 	bodyBytes, _ := ioutil.ReadAll(response.Body) //fake sunucudan gelen(yansıyan) veriyi oku-yazdır
 	bodyString := string(bodyBytes)
 	fmt.Println(bodyString)
-
 	var todoresponse Todo
 	json.Unmarshal(bodyBytes, &todoresponse)
 	fmt.Println(todoresponse)
-
 }

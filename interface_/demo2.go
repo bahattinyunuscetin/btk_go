@@ -7,7 +7,6 @@ type Mortgage struct {
 	addres             string
 	rate               float64
 }
-
 type Car struct {
 	creditPaymentTotal float64
 	carInfo            string
