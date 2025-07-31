@@ -1,4 +1,4 @@
-# 🐹 BTK Akademi - Go (Golang) Dili Kursu Projeleri
+#  BTK Akademi - Go (Golang) Dili Kursu Projeleri
 
 Merhaba yazılımcı dostum! Bu repo, [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/go-ile-programlamaya-giris-12760) uzerinden tamamladigim **Go ile Programlamaya Giriş** kursu kapsaminda gelistirdigim proje ve ornekleri barindiriyor. "Go neymis ya" diyorsan, iceri gir bir bak: sade, hizli, guclu.
 
